@@ -17,7 +17,7 @@ const Bookshelf = () => {
 //need to add use effect
     const handleSubmit = (event) => {
         event.preventDefault();
-        setBooks({...books, newBook})
+        setBooks([...books, newBook]) //was having a hard time with understanding the brackets needed around this. got the answer from chatgpt.
         setNewBook({title: '', author: ''})
         console.log(books)
     }
@@ -46,10 +46,10 @@ const Bookshelf = () => {
       </form>
         </div>
          <div className="bookCardsDiv">{/* Book cards will display here */}
-{/*  
+ 
              {books.map((book, index) => {
                 return (<div className="bookCard" key={index}>Title: {book.title} Author: {book.author}</div>)
-            })}    */}
+            })}    
 
          </div>
     </div>
